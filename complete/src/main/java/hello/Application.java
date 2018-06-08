@@ -1,14 +1,16 @@
 package hello;
 
 import java.util.Arrays;
-import org.springframework.boot.web.servlet.support.*;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.filter.CharacterEncodingFilter;
 
 @SpringBootApplication
 public class Application extends SpringBootServletInitializer {
@@ -35,6 +37,17 @@ public class Application extends SpringBootServletInitializer {
             }
 
         };
+    }
+    
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	@Bean
+    public FilterRegistrationBean filterRegistrationBean() {
+        FilterRegistrationBean registrationBean = new FilterRegistrationBean();
+        CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
+        characterEncodingFilter.setForceEncoding(true);
+        characterEncodingFilter.setEncoding("UTF-8");
+        registrationBean.setFilter(characterEncodingFilter);
+        return registrationBean;
     }
 
 }

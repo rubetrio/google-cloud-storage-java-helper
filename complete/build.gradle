@@ -1,3 +1,5 @@
+apply plugin: 'war'
+
 buildscript {
     repositories {
         mavenCentral()
@@ -20,18 +22,21 @@ bootJar {
 
 repositories {
     mavenCentral()
+    maven { url "http://repo.spring.io/snapshot" }
+    maven { url "https://repo.spring.io/milestone" }
 }
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web")
-    // tag::actuator[]
-    compile("org.springframework.boot:spring-boot-starter-actuator")
-    // end::actuator[]
-    // tag::tests[]
+    compile("org.springframework.boot:spring-boot-starter-web") 
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-gcp', version: '1.0.0.M3'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-gcp-starter-storage', version: '1.0.0.M3' //this is needed, else gs:// resource won't be working
+    compile group: 'com.google.cloud', name: 'google-cloud-storage', version: '1.31.0'
+    compile group: 'commons-io', name: 'commons-io', version: '2.4'
     testCompile("org.springframework.boot:spring-boot-starter-test")
-    // end::tests[]
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+    
 }
 
