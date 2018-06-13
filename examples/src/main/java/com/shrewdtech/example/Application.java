@@ -1,4 +1,4 @@
-package hello;
+package com.shrewdtech.example;
 
 import java.util.Arrays;
 

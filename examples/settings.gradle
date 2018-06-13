@@ -1,0 +1,3 @@
+include 'google-cloud-storage-helper'
+
+project(':google-cloud-storage-helper').projectDir = new File('../google-cloud-storage-helper')

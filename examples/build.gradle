@@ -1,0 +1,29 @@
+apply from: '../build.gradle'
+
+apply plugin: 'war'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.2.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+bootWar {
+  baseName = 'shrewdtech-google-cloud-storage-example'
+  version =  '0.1.0'
+}
+
+dependencies {
+  compile project(":google-cloud-storage-helper")
+  compile("org.springframework.boot:spring-boot-starter-web")
+  providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+}
