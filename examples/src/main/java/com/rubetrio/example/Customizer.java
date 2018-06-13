@@ -1,4 +1,4 @@
-package com.shrewdtech.example;
+package com.rubetrio.example;
 
 import org.springframework.boot.web.server.WebServerFactoryCustomizer;
 import org.springframework.boot.web.servlet.server.ConfigurableServletWebServerFactory;

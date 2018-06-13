@@ -1,4 +1,4 @@
-package com.shrewdtech.gcshelper;
+package com.rubetrio.gcshelper;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;

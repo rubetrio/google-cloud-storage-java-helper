@@ -1,4 +1,4 @@
-package com.shrewdtech.example;
+package com.rubetrio.example;
 
 import java.util.Arrays;
 
