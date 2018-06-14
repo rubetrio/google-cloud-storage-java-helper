@@ -30,7 +30,7 @@ public class GoogleCloudStorageHelper{
 	private final JSONObject json;
 	
 	public GoogleCloudStorageHelper() throws IOException, JSONException{
-		gcsJsonFile = ResourceUtils.getFile("classpath:gcp_spring_poc.json");		
+		gcsJsonFile = ResourceUtils.getFile("classpath:google_credential.json");		
 		storage = StorageOptions.newBuilder()
 			          .setCredentials(
 			              ServiceAccountCredentials.fromStream(
