@@ -1,4 +1,4 @@
-package com.rubetrio.example;
+package com.github.rubetrio.example;
 
 import java.util.Arrays;
 

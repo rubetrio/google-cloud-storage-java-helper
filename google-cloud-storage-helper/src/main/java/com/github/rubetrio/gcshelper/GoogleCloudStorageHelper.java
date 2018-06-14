@@ -1,4 +1,4 @@
-package com.rubetrio.gcshelper;
+package com.github.rubetrio.gcshelper;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;

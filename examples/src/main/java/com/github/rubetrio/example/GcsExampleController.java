@@ -1,4 +1,4 @@
-package com.rubetrio.example;
+package com.github.rubetrio.example;
 
 import java.io.IOException;
 
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.rubetrio.gcshelper.GoogleCloudStorageHelper;
+import com.github.rubetrio.gcshelper.GoogleCloudStorageHelper;
 
 @RestController
 public class GcsExampleController {
