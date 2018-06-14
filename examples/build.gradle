@@ -18,7 +18,7 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
 bootWar {
-  baseName = 'shrewdtech-google-cloud-storage-example'
+  baseName = 'rubetrio-google-cloud-storage-example'
   version =  '0.1.0'
 }
 

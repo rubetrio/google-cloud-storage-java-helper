@@ -15,7 +15,7 @@ public class GcsExampleController {
 
 	@RequestMapping("/home")
 	public String index() {
-		return "Greetings from ShrewdTech!";
+		return "Greetings from Rubetrio!";
 	}
 
 	@RequestMapping(value = "/get-file", method = RequestMethod.GET)
